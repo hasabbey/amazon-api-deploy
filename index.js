@@ -1,9 +1,9 @@
-// const express= require('express');
+const express= require('express');
 const cors= require('cors');
 const dotenv= require('dotenv');
 dotenv.config();
 const stripe=require('stripe')
-(process.env.STRIP_KEY)
+(process.env.STRIPE_KEY)
 const app =express();
 app.use(cors({orgin:true}))
 app.use(express.json());
@@ -33,5 +33,5 @@ else{
 
 app.listen(5000,(err)=>{
 if(err) throw err
-console.log("the servr is running at port http://localhost:5000");
+console.log("the servr is running at port https://localhost:5000");
 })
